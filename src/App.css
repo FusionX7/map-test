@@ -1,22 +1,112 @@
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+}
 .App {
+  display: flex;
+  height: 100%;
+}
+.map-container {
+  position: relative;
+  width: 70%;
+  height: 100%;
+}
+.editor-container {
+  position: relative;
+  width: 30%;
+  height: 100%;
+}
+.search-wrapper {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.location-search-input {
+  width: 100%;
+  -webkit-appearance: none;
+  border: 0;
+  font-family: inherit;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.location-search-input:focus {
+  background: none;
+  outline: none;
+}
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  border-radius: 50px;
+  height: 5px; /* Specified height */
+  background: #59595a; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  margin-top: 30px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  position: relative;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 18px solid #8e8e8f;
+  top: -15px;
+  cursor: pointer; /* Cursor on hover */
+}
+.start-node {
+  width: 15px;
+  height: 15px;
+  background: #59595a;
+  bottom: 1.5rem;
+  left: -0.3rem;
+  position: absolute;
+  border-radius: 15px;
+}
+.end-node {
+  width: 15px;
+  height: 15px;
+  background: #59595a;
+  bottom: 1.5rem;
+  right: -0.7rem;
+  position: absolute;
+  border-radius: 15px;
+}
+.input-wrapper {
+  position: relative;
+}
+.right-limit {
+  position: absolute;
+  right: 0;
+}
+.select-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid black;
 }
-
-.App-link {
-  color: #09d3ac;
+.editor-wrapper {
+  margin: 8px;
+}
+.edit-item {
+  margin: 12px 0;
+}
+.list-positions {
+  padding-inline-start: 0;
+  max-height: 120px;
+  overflow: auto;
+  list-style-type: none;
+  border: 1px solid #d7d7d7;
+}
+.list-item {
+  padding: 5px;
+  border: 1px solid #d7d7d7;
 }
